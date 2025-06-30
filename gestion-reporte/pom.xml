@@ -10,12 +10,10 @@
 	</parent>
 
 	<groupId>com.perfulandia</groupId>
-	<artifactId>gestion-producto</artifactId>
+	<artifactId>gestion-reporte</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-	<name>gestion-de-productos</name>
-
-	<description>Microservicio REST para gestionar productos</description>
+	<name>gestion-de-reporte</name>
+	<description>Microservicio REST para la gestion de reportes</description>
 
 	<url/>
 
