@@ -87,12 +87,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Spring Security Test (para pruebas de seguridad) -->
+        <!-- Spring Security Test (para pruebas de seguridad) 
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
 
         <!-- JUnit 5 -->
         <dependency>
