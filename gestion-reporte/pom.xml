@@ -87,11 +87,37 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring Security Test (para pruebas de seguridad) -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.7.7</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito JUnit 5 Integration -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>3.7.7</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
