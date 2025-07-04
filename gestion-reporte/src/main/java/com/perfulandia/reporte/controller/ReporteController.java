@@ -20,6 +20,7 @@ public class ReporteController {
     @PostMapping
     public ResponseEntity<ReporteDTO> crear(@RequestBody ReporteDTO dto) {
         ReporteDTO creado = service.crear(dto);
+        // Agregamos enlaces HATEOAS desde el controlador
         creado.add(linkTo(methodOn(ReporteController.class).obtener(creado.getId())).withSelfRel());
         return ResponseEntity.ok(creado);
     }

@@ -4,8 +4,6 @@ import com.perfulandia.reporte.dto.ReporteDTO;
 import com.perfulandia.reporte.model.Reporte;
 import com.perfulandia.reporte.repository.ReporteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.Link;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -56,18 +54,7 @@ public class ReporteService {
     public ReporteDTO obtenerPorId(Integer id) {
         Reporte reporte = reporteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Reporte no encontrado"));
-        ReporteDTO dto = toDTO(reporte);
-
-        // Agregar HATEOAS: Link para obtener el reporte
-        Link selfLink = WebMvcLinkBuilder.linkTo(
-                WebMvcLinkBuilder.methodOn(ReporteService.class).obtenerPorId(id)
-        ).withSelfRel();
-        dto.add(selfLink);
-
-        // Agregar más enlaces HATEOAS
-        dto.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(ReporteService.class).listar()).withRel("reportes"));
-
-        return dto;
+        return toDTO(reporte);
     }
 
     // Actualizar un reporte
